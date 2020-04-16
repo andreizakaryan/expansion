@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Expansion.Models.Board">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <AssociationLine Name="gameBoard" Type="Expansion.Models.Cell" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="4.875" />
+        <Point X="3.626" Y="4.875" />
+        <Point X="3.626" Y="4.875" />
+        <Point X="2.75" Y="4.875" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.027" Y="-0.263" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgQAECAAAAAAAAAQAAAAAAAACAAAQAAA=</HashCode>
+      <FileName>Models\Board.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="gameBoard" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Expansion.Models.Cell">
+    <Position X="1.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAA=</HashCode>
+      <FileName>Models\Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Expansion.Models.Game">
+    <Position X="6" Y="1" Width="1.5" />
+    <AssociationLine Name="Board" Type="Expansion.Models.Board" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6" Y="2.188" />
+        <Point X="5.625" Y="2.188" />
+        <Point X="5.625" Y="4.312" />
+        <Point X="5.25" Y="4.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.296" Y="0.956" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Player1" Type="Expansion.Models.Player" FixedFromPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.875" />
+        <Point X="8.75" Y="1.875" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Player2" Type="Expansion.Models.Player" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.125" />
+        <Point X="8.75" Y="2.125" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Mover" Type="Expansion.Models.Algorithms.IMover">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.902" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CurPlayer" Type="Expansion.Models.Player" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.375" />
+        <Point X="8.75" Y="2.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAYQCACAAIAAAAAAwCQAAAAAAAACAgAACAAAgCgAAAA=</HashCode>
+      <FileName>Models\Game.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Board" />
+      <Field Name="Player1" />
+      <Field Name="Player2" />
+      <Field Name="Mover" />
+      <Property Name="CurPlayer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Expansion.Models.Player">
+    <Position X="8.75" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Strategy" Type="Expansion.Models.Algorithms.IStrategy" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.25" Y="1.938" />
+        <Point X="11.125" Y="1.938" />
+        <Point X="11.125" Y="3.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.857" Y="0.704" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAIAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Models\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Strategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Expansion.Models.Algorithms.Mover">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAIAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Algorithms\Mover.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Expansion.Models.Algorithms.StrategyAlphaBeta">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAQAAAAAAAAgAAAAAACAAgAAAAAQAAAAA=</HashCode>
+      <FileName>Models\Algorithms\StrategyAlphaBeta.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.21" Collapsed="true" />
+  </Class>
+  <Class Name="Expansion.Models.Algorithms.StrategyRandom">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Algorithms\StrategyRandom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Interface Name="Expansion.Models.Algorithms.IMover">
+    <Position X="2" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Algorithms\IMover.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Expansion.Models.Algorithms.IStrategy">
+    <Position X="10.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Algorithms\IStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
